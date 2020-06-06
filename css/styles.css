@@ -1,0 +1,160 @@
+::-webkit-scrollbar
+{
+  width: 0;
+  background: transparent; /* make scrollbar transparent */
+}
+
+body
+{
+  background-color: #AEC7A2;
+  margin: 40px 40px 40px 100px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.top, .bottom, .left, .right
+{
+  background-color: black;
+  position: fixed;
+}
+.left, .right
+{
+  top: 0;
+  bottom: 0;
+  width: 10px;
+}
+
+.left
+{
+  left: 0;
+  width: 50px;
+}
+
+.right
+{
+  right: 0;
+}
+
+.top, .bottom
+{
+
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.top
+{
+  top: 0;
+}
+
+.bottom
+{
+  bottom: 0;
+}
+
+.progress-container
+{
+  top: 0;
+  bottom: 0;
+  width: 5px;
+}
+
+.progress-bar
+{
+  height: 100vh;
+  width: 5px;
+  background-color: #AEC7A2;
+}
+
+.left .sitename
+{
+  font-family: 'Abril Fatface', serif;
+  letter-spacing: 5px;
+  writing-mode: tb-rl;
+  padding-left: 15px;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+a
+{
+  text-decoration: none;
+}
+
+.sitename
+{
+  color: white;
+}
+
+.sitename:hover
+{
+  cursor: pointer;
+  color: #AEC7A2;
+}
+
+.card {
+   padding: 20px;
+   margin-top: 20px;
+	 margin: 30px;
+}
+
+h2
+{
+  font-family: 'Abril Fatface', serif;
+  letter-spacing: 1px;
+}
+
+h5
+{
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.images {
+
+  width: 100%;
+  padding: 20px;
+}
+
+.name
+{
+  font-size: 5em;
+  /*font-family: 'Anton', sans-serif;*/
+}
+
+.description
+{
+  font-size: 1.5em;
+}
+
+.card .readmore, .card .allposts, .card .back
+{
+  text-transform: uppercase;
+  padding: 6px 10px 6px 10px;
+  color: white;
+  font-size: 11px;
+  border: 1px solid black;
+  background-color: black;
+  letter-spacing: 1px;
+}
+
+.card .readmore:hover, .card .allposts:hover, .card .back:hover
+{
+  background-color: #AEC7A2;
+  color: black;
+}
+
+.card .allposts
+{
+  font-style: italic;
+  padding: 6px 20px 6px 20px;
+}
+
+.column
+{
+  width: 80%;
+}
