@@ -171,12 +171,6 @@ a
     padding-top: 150px;
   }
 
-  #home
-  {
-    position: absolute;
-    left: 15%;
-  }
-
   .mobile-nav
   {
     position: fixed;
