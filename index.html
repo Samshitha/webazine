@@ -2,143 +2,90 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>webazine.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <title>TechMagazine.</title>
   </head>
   <body>
-    <style media="screen">
-      body
-      {
-        background-color: #AEC7A2;
-        margin: 40px 40px 40px 100px;
-        font-family: 'Montserrat', sans-serif;
-      }
-
-      .top, .bottom, .left, .right
-      {
-      	background-color: black;
-      	position: fixed;
-      }
-      .left, .right
-      {
-      	top: 0;
-        bottom: 0;
-      	width: 10px;
-      }
-
-      .left
-      {
-        left: 0;
-        width: 50px;
-      }
-
-      .right
-      {
-        right: 0;
-      }
-
-      .top, .bottom
-      {
-      	left: 0;
-        right: 0;
-      	height: 10px;
-      }
-
-      .top
-      {
-        top: 0;
-      }
-
-      .bottom
-      {
-        bottom: 0;
-      }
-
-      .left .sitename
-      {
-        font-family: 'Abril Fatface', serif;
-        letter-spacing: 0.2em;
-        writing-mode: tb-rl;
-        padding-left: 15px;
-        color: white;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-      }
-
-      .sitename
-      {
-        text-decoration: none;
-        color: white;
-      }
-
-      .sitename:hover
-      {
-        cursor: pointer;
-        color: #AEC7A2;
-      }
-
-      .title
-      {
-        font-family: 'Abril Fatface', serif;
-        margin: 0;
-        padding-left: 20px;
-        position: absolute;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        letter-spacing: 1px;
-      }
-
-      .name
-      {
-        font-size: 5em;
-        /*font-family: 'Anton', sans-serif;*/
-      }
-
-      .description
-      {
-        font-size: 1.5em;
-      }
-
-      .visitblog
-      {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 0.8em;
-        text-transform: uppercase;
-        text-decoration: none;
-        border: 1px solid black;
-        padding: 10px;
-        background-color: black;
-        color: white;
-      }
-
-      .visitblog:hover
-      {
-        border: 1px solid black;
-        color: black;
-        background-color: #AEC7A2;
-        cursor: pointer;
-      }
-    </style>
-
-    <div class = "top"></div>
-    <div class = "bottom"></div>
-    <div class = "left">
-      <a class = "sitename" href="index.html">webazine.</a>
+    <div class = "mobile-nav">
+      <ul>
+        <li><a class = "big" onclick = "openpage(event, 'home')" id = "defaultOpen">HOME</a></li>
+        <li><a class = "big" onclick = "openpage(event, 'blog')">BLOG</a></li>
+        <li><a class = "big" onclick = "openpage(event, 'contact')">CONTACT</a></li>
+      </ul>
     </div>
-    <div class = "right"></div>
-    <div class = "title">
-      <p class = "name">I'm P.</p>
-      <p class = "description">
-        This is a personal Blog on Tech.
-      </p>
-      <a class = "visitblog" href = "blog.html">Visit Blog</a>
+    <div class = "left column">
+      <div id = "home" class = "tab">
+        <p class = "heading">Hi. I'm Phanindra.</p>
+        <p class = "h3"> This is a personal Blog on Tech.</p>
+      </div>
+      <div id = "blog" class = "tab">
+        <p class = "h1">Hello There!</p>
+        <p class = "date">June 6, 2020</p>
+        <p>
+          This is my second blog after several years, first one being on the same date in 2017.
+          I would like to quickly list down things that the world is going through. This serves
+          more like a journal. This won’t be the case in the future as i’ll be ready with more
+          and more things to tell you!<span id="dots">...</span><span id = "more"> The world as of today is at the brink of
+          surviving the COVID-19, not sure when it’s gonna end. More than 50M people have been
+          infected and nearly 0.5M have been dead. I’m being at home since 2 months, and wish
+          to go out in the traffic without any masks and fear. Every country’s economic condition
+          has been worse, and it continues to be.</span>
+        </p>
+        <p><a id = "readmore" onclick="myFunction()">Read more</a></p>
+      </div>
+      <div id = "contact" class = "tab">
+        <h4><a class = "mail-button" href="mailto:phanivenkat27061999@gmail.com">e-mail me :)</a></h4>
+      </div>
     </div>
+    <div class = "right column">
+      <div class = "web-nav">
+        <ul>
+          <li><h4><a class = "big" onclick = "openpage(event, 'home')" id = "defaultOpen">home</a></h4></li>
+          <li><h4><a class = "big" onclick = "openpage(event, 'blog')">blog</a></h4></li>
+          <li><h4><a class = "big" onclick = "openpage(event, 'contact')">contact</a></h4></li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      function openpage(evt, pagename) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("big");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(pagename).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      document.getElementById("defaultOpen").click();
+    </script>
+
+    <script type="text/javascript">
+    function myFunction()
+    {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("readmore");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      }
+      else
+      {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    }
+    </script>
   </body>
 </html>
