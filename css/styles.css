@@ -98,6 +98,11 @@ p
   transition: color 0.7s ease;
 }
 
+.read-more
+{
+  margin-bottom: 5%;
+}
+
 #home
 {
   position: absolute;
