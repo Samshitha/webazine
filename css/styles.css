@@ -107,12 +107,14 @@ p
 {
   position: absolute;
   top: 40%;
+  left: 15%;
 }
 
 #contact
 {
   position: absolute;
   top: 40%;
+  left: 20%;
 }
 
 #more
@@ -220,4 +222,6 @@ a
   {
     font-size: 2em;
   }
+
+
 }
