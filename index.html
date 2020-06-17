@@ -12,9 +12,9 @@
   <body>
     <div class = "mobile-nav">
       <ul>
-        <li><a class = "big" onclick = "openpage(event, 'home')" id = "defaultOpen">HOME</a></li>
-        <li><a class = "big" onclick = "openpage(event, 'blog')">BLOG</a></li>
-        <li><a class = "big" onclick = "openpage(event, 'contact')">CONTACT</a></li>
+        <li><a class = "small active" onclick = "openpages(event, 'home')" id = "defaultOpen">HOME</a></li>
+        <li><a class = "small" onclick = "openpages(event, 'blog')">BLOG</a></li>
+        <li><a class = "small" onclick = "openpages(event, 'contact')">CONTACT</a></li>
       </ul>
     </div>
     <div class = "left column">
@@ -45,8 +45,8 @@
     </div>
     <div class = "right column">
       <div class = "web-nav">
-        <ul>
-          <li><h4><a class = "big" onclick = "openpage(event, 'home')" id = "defaultOpen">home</a></h4></li>
+        <ul id = "webnav">
+          <li><h4><a class = "big active" onclick = "openpage(event, 'home')" id = "defaultOpen">home</a></h4></li>
           <li><h4><a class = "big" onclick = "openpage(event, 'blog')">blog</a></h4></li>
           <li><h4><a class = "big" onclick = "openpage(event, 'contact')">contact</a></h4></li>
         </ul>
@@ -60,6 +60,23 @@
           tabcontent[i].style.display = "none";
         }
         tablinks = document.getElementsByClassName("big");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(pagename).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      document.getElementById("defaultOpen").click();
+    </script>
+
+    <script>
+      function openpages(evt, pagename) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("small");
         for (i = 0; i < tablinks.length; i++) {
           tablinks[i].className = tablinks[i].className.replace(" active", "");
         }

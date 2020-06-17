@@ -84,11 +84,15 @@ p
   list-style: decimal-leading-zero;
 }
 
-
 .web-nav ul li a
 {
   text-decoration: none;
   color: #363636;
+}
+
+.right .web-nav ul .active
+{
+  color: #7C7C7C;
 }
 
 .web-nav ul li a:hover
@@ -213,6 +217,11 @@ a
     transition: color 0.7s ease;
   }
 
+  .mobile-nav ul .active
+  {
+    color: #7C7C7C;
+  }
+
   .web-nav
   {
     display: none;
@@ -222,6 +231,4 @@ a
   {
     font-size: 2em;
   }
-
-
 }
